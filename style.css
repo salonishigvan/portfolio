@@ -63,6 +63,7 @@ a,
 
 /* DESKTOP NAV */
 
+
 nav,
 .nav-links {
   display: flex;
@@ -432,51 +433,126 @@ article .icon {
 
 /* CONTACT */
 
-#contact {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 70vh;
+.contact {
+  background-position: center;
 }
 
-.contact-info-upper-container {
-  display: flex;
-  justify-content: center;
-  border-radius: 2rem;
-  border: var(--button-border);
-  border-color: var(--container-border);
-  background: var(--background-color);
-  margin: 2rem auto;
-  padding: 0.5rem;
+.contact__form-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-right: 1px double #333;
+  border-bottom: 1px double #333;
+  background: white;
+  padding: 5rem;
+  max-width: 35rem;
+  text-align: right;
+  border-radius: 10px;
+  margin: 1rem auto;
+
 }
 
-.contact-info-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
+.submit-btn {
+  float: right;
+  background: #333;
+  color: #f0f0f0;
+  padding: 5px 5px;
+  border-radius: 5px;
+  width: 30%;
+  padding: 1rem 1rem;
+  font-size: 1.6rem;
 }
 
-.contact-info-container p {
-  font-size: larger;
+.contact__form-field {
+  margin-bottom: 2rem;
 }
 
-.contact-icon {
-  cursor: default;
+.contact__form-label {
+  color: #666;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: left;
+}
+.contact__form-input {
+  color: #333;
+  padding: 1rem;
+  width: 95%;
+  border: 1px solid #ebebeb;
+  font-size: 1.2rem;
+  letter-spacing: 0px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  font-weight: 400;
+}
+.contact__form-input::placeholder {
+  color: #999;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.contact__form-input::-webkit-input-placeholder {
+  color: #999;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.contact__form-input:-ms-input-placeholder {
+  color: #999;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.contact__form-input::-ms-input-placeholder {
+  color: #999;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.contact__form-input:-moz-placeholder {
+  opacity: 1;
+  color: #999;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.contact__form-input::-moz-placeholder {
+  opacity: 1;
+  color: #999;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
-.email-icon {
-  height: 2.5rem;
+.contact__btn {
+  width: 30%;
+  padding: 2rem 4rem;
+  font-size: 1.6rem;
 }
+
+
 
 /* FOOTER SECTION */
 
 footer {
   height: 26vh;
-  margin: 0 1rem;
+  margin-top: 20rem;
 }
 
 footer p {
   text-align: center;
+}
+
+footer nav {
+  height: fit-content;
+  margin-bottom: 2rem;
+  margin-top: 20px;
+}
+
+/* CUSTOM CURSOR */
+
+.custom-cursor {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none; /* Make sure it's not clickable */
+  transform: translate(-50%, -50%); /* Center the circle on the cursor */
+  transition: transform 0.1s ease-out; /* Optional smooth movement */
+  z-index: 9999; /* Stay on top of all elements */
 }
