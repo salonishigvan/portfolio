@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Saloni Shigvan | Web Developer</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaquery.css" />
   </head>
   <body>
+    <!-- CUSTOM CURSOR -->
+    <div class="custom-cursor"></div>
+
     <nav id="desktop-nav">
-      <div class="logo">Saloni Shigvan</div>
+      <div class="logo">salonishigvan</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -30,6 +33,7 @@
         </ul>
       </div>
     </nav>
+
     <nav id="hamburger-nav">
       <div class="logo">Saloni Shigvan</div>
       <div class="hamburger-menu">
@@ -56,6 +60,7 @@
         </div>
       </div>
     </nav>
+    
     <section id="profile">
       <div class="section__pic-container">
         <img src="./images/Picsart_24-09-17_23-26-25-625.png" alt="John Doe profile picture" />
@@ -95,6 +100,7 @@
         </div>
       </div>
     </section>
+
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
@@ -147,6 +153,7 @@
         onclick="location.href='./#experience'"
       />
     </section>
+
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
@@ -210,7 +217,7 @@
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
+            <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
                 <img
@@ -277,6 +284,7 @@
         onclick="location.href='./#projects'"
       />
     </section>
+
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -365,33 +373,57 @@
         onclick="location.href='./#contact'"
       />
     </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./images/email_light.png"
-            src-light="./images/email_light.png"
-            src-dark="./images/email_dark.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
+
+    <!-- CONTACT FORM -->
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <p class="section__text__p1">Lets Connect</p>
+      <h1 class="h2 title">Contact</h1>
+    <div class="contact__form-container">
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact__form">
+        <div class="contact__form-field">
+          <!-- Replace with your Access Key -->
+          <input type="hidden" name="access_key" value="fffc675f-7568-457e-a8b3-dd61f806a4bf">
+          
+          <label class="contact__form-label" for="name">Name</label>
+          <input
+            required
+            placeholder="Enter Your Name"
+            type="text"
+            class="contact__form-input"
+            name="name"
+            id="name"
           />
-          <p><a href="https://mail.google.com/mail/u/0/#inbox">salonishigvan2003@gmail.com</a></p>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./images/linkedin_light.png"
-            src-light="./images/linkedin_light.png"
-            src-dark="./images/linkedin_dark.png"
-            alt="My LinkedIn profile"
-            class="icon linkedin-icon"
-            onclick="location.href='https://www.linkedin.com/feed/'"
+        <div class="contact__form-field">
+          <label class="contact__form-label" for="email">Email</label>
+          <input
+            required
+            placeholder="Enter Your Email"
+            type="text"
+            class="contact__form-input"
+            name="email"
+            id="email"
           />
-          <p><a href="https://www.linkedin.com/feed/">LinkedIn</a></p>
         </div>
-      </div>
-    </section>
+        <div class="contact__form-field">
+          <label class="contact__form-label" for="message">Message</label>
+          <textarea
+            required
+            cols="30"
+            rows="10"
+            class="contact__form-input"
+            placeholder="Enter Your Message"
+            name="message"
+            id="message"
+          ></textarea>
+        </div>
+        <button type="submit" class="submit-btn">
+          Submit
+        </button>
+      </form>
+    </div>
+</section>
+
     <footer>
       <nav>
         <div class="nav-links-container">
@@ -406,5 +438,8 @@
       <p>Copyright &#169; 2023 Saloni Shigvan. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    
   </body>
 </html>
